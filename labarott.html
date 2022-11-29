@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn">click</button>
+    <button id="btn2">show</button>
+    <textarea id="txt" placeholder="enter ur data"></textarea>
+    <script>
+        let btn = document.getElementById('btn')
+        let btn2 = document.getElementById('btn2')
+        let txt = document.getElementById('txt')
+        let arr = []
+        btn.onclick = function() {
+            arr.push(txt.value)
+        }
+        btn2.onclick = function() {
+            function bubbleSort(arr) {
+    for (let i = 0, endI = arr.length - 1; i < endI; i++) {
+        for (let j = 0, endJ = endI - i; j < endJ; j++) {
+            if (arr[j] > arr[j + 1]) {
+                swap = arr[j];
+                arr[j] = arr[j + 1];
+                arr[j + 1] = swap;
+            }
+        }
+    }
+    return arr;
+}
+            console.log(arr)
+        }
+    </script>
+</body>
+</html>
